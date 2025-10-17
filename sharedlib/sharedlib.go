@@ -994,6 +994,7 @@ func SignUpdateMargin(cMarketIndex C.int, cUSDCAmount C.longlong, cDirection C.i
 
 	if txClient == nil {
 		err = fmt.Errorf("Client is not created, call CreateClient() first")
+		return
 	}
 
 	marketIndex := uint8(cMarketIndex)
